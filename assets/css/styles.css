@@ -281,6 +281,68 @@ h6 {
   margin-bottom: 0.5rem;
 }
 
+/* advantages section */
+.advantages {
+  padding: 80px 0;
+  background-color: var(--secondary-color);
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.advantage-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 66.67%; /* 3:2 aspect ratio */
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.advantage-card:hover .image-container img {
+  transform: scale(1.05);
+}
+
+.advantage-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 20px 20px 10px;
+  color: var(--accent-color);
+}
+
+.advantage-card p {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  padding: 0 20px 20px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
 /* Contact Section */
 .contact {
   padding: 4rem 0;
@@ -298,13 +360,39 @@ h6 {
   color: var(--secondary-color);
 }
 
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.contact-info {
+  flex: 1;
+  background-color: var(--accent-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
+
 .contact-form {
+  flex: 2;
   max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
   display: grid;
   gap: 1.5rem;
   padding: 2rem;
-  background-color: #fff;
+  background-color: var(--primary-color);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -316,6 +404,7 @@ h6 {
   border: 1px solid #ddd;
   border-radius: 4px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
 }
 
 .contact-form input:focus,
@@ -328,15 +417,16 @@ h6 {
 .contact-form button {
   padding: 1rem 2rem;
   background-color: var(--accent-color);
-  color: #fff;
+  color: var(--text-light);
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: inherit;
 }
 
 .contact-form button:hover {
-  background-color: #ff6600;
+  background-color: #e65c00;
 }
 
 /* Footer */
@@ -431,5 +521,30 @@ h6 {
 
   .flag-img {
     display: none;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantage-card {
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
