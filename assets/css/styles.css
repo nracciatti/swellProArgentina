@@ -1,0 +1,401 @@
+:root {
+  --primary-color: #333;
+  --secondary-color: #f4f4f4;
+  --accent-color: #ff6600;
+  --text-color: #333;
+  --text-light: #fff;
+  --whatsapp-color: #25d366;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--text-color);
+  overflow-x: hidden;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+  background-color: var(--primary-color);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  /* transition: background-color 0.3s ease; */
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #ff6600;
+}
+
+.flag-img {
+  width: 100px;
+  height: auto;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-light);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  color: var(--text-light);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Llegamos a argentina Section */
+.background-image-section {
+  position: relative;
+  background-image: url("/assets/images/FD3-fishing-drone-on-beach.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Products Section */
+.products {
+  padding: 4rem 0;
+  background-color: var(--secondary-color);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+.product-card h3 {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.product-card:hover h3 {
+  color: var(--accent-color);
+}
+
+.product-card p {
+  padding: 0 1rem 1rem;
+  color: #666;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e65c00;
+  transform: translateY(-2px);
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 0;
+}
+
+.features .section-title{
+  color: var(--primary-color);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card i {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 4rem 0;
+  /* background-color: var(--secondary-color); */
+  background-image: url(/assets/images/home-page-subscribe-P1_1400x.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0%;
+}
+
+.contact .container{
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+  outline: none;
+}
+
+.contact-form button {
+  padding: 1rem 2rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ff6600;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-link {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* WhatsApp Button */
+.wsp-button {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 15px;
+  right: 15px;
+  background: green;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.wsp-icon {
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  margin-top: 6px;
+}
+
+.wsp-button:hover {
+  text-decoration: none;
+  background: #0df053;
+  color: rgb(226, 224, 224);
+  transition: 0.8s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .product-grid,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flag-img {
+    display: none;
+  }
+}
