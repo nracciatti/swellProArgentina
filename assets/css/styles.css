@@ -163,7 +163,7 @@ h6 {
 .product-features {
   list-style: none;
   padding: 0;
-  margin: 1rem 0;
+  margin: 0;
   display: grid;
   gap: 0.5rem;
 }
@@ -207,27 +207,6 @@ h6 {
 .product-card h3 {
   margin: 1rem 0;
   font-size: 1.2rem;
-}
-
-.product-features {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 0.5rem;
-}
-
-.product-features li {
-  background: #f9f9f9;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease;
-}
-
-.product-features li:hover {
-  background: #ff6600;
-  color: #fff;
 }
 
 .product-card .btn {

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize AOS
+  // Inicializo Animate On Scroll de JS
   AOS.init({
     duration: 1000,
     once: true,
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     burger.classList.toggle("toggle");
   });
 
-  // Close nav when a link is clicked
+  // Cierre del nav cuando clickeamos un link
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("active");
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Add header background opacity on scroll
+  // Agrego fondo con opacity cuando scrolleo
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
       header.style.backgroundColor = "rgba(51, 51, 51, 0.9)";
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Parallax effect for hero section
+  // Efecto parallax en el hero
   const heroContent = document.querySelector(".hero-content");
   window.addEventListener("scroll", () => {
     const scrolled = window.pageYOffset;
