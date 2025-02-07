@@ -27,6 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
   nextButton.addEventListener("click", nextSlide);
   prevButton.addEventListener("click", prevSlide);
 
-  // Auto-play (opcional)
-  setInterval(nextSlide, 6000);
+  // Auto-play 
+  setInterval(nextSlide, 4000);
 });

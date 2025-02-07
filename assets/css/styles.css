@@ -131,6 +131,7 @@ h6 {
   background-image: url("/assets/images/FD3-fishing-drone-on-beach.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: 500px;
 }
 
@@ -321,6 +322,8 @@ h6 {
   line-height: 1.6;
   font-weight: bold;
 }
+
+
 
 /* Contact Section */
 .contact {
